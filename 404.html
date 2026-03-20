@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | ToDo App</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233F51B5'/><text x='7' y='23' font-size='20' fill='white' font-family='Arial'>✓</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .not-found {
+      position: relative; z-index: 1;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .nf-inner { max-width: 520px; }
+
+    .nf-number {
+      font-family: 'Oxanium', sans-serif;
+      font-size: clamp(100px, 20vw, 160px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -6px;
+      background: linear-gradient(120deg, #9EB1FF 0%, #B39DFF 45%, #4DDEFF 100%);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gshift 5s ease-in-out infinite alternate;
+      margin-bottom: 8px;
+      display: block;
+    }
+    @keyframes gshift { 0%{background-position:0%} 100%{background-position:100%} }
+
+    .nf-line {
+      width: 60px; height: 3px; border-radius: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--violet));
+      margin: 0 auto 28px;
+    }
+
+    .nf-title {
+      font-family: 'Oxanium', sans-serif;
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 700; color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
+
+    .nf-sub {
+      font-size: 15px; color: var(--dim);
+      line-height: 1.75; margin-bottom: 40px;
+    }
+
+    .nf-actions {
+      display: flex; gap: 14px;
+      justify-content: center; flex-wrap: wrap;
+    }
+
+    .nf-card {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px 28px;
+      text-decoration: none;
+      transition: border-color .2s, background .2s, transform .2s;
+      backdrop-filter: blur(20px);
+    }
+    .nf-card:hover {
+      border-color: rgba(92,107,192,.45);
+      background: rgba(63,81,181,.07);
+      transform: translateY(-3px);
+    }
+    .nf-card-icon {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: rgba(92,107,192,.12);
+      border: 1px solid rgba(92,107,192,.2);
+      display: flex; align-items: center; justify-content: center;
+      color: #9EB1FF; flex-shrink: 0;
+    }
+    .nf-card-icon svg { width: 18px; height: 18px; }
+    .nf-card-text { text-align: left; }
+    .nf-card-label {
+      font-family: 'Oxanium', sans-serif;
+      font-size: 13.5px; font-weight: 700;
+      color: #E0E4FF; display: block;
+    }
+    .nf-card-hint {
+      font-size: 12px; color: var(--dim);
+    }
+
+    @media(max-width: 480px) {
+      .nf-actions { flex-direction: column; align-items: center; }
+      .nf-card { width: 100%; max-width: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-row">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">✓</div>
+        ToDo
+      </a>
+      <a href="index.html#download" class="btn-nav">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-right:6px;"><path d="M3 20.5v-17c0-.83 1.23-1.3 1.93-.7l14 8.5c.6.36.6 1.14 0 1.5l-14 8.5c-.7.6-1.93.13-1.93-.7z"/></svg>
+        Download Free
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="not-found">
+    <div class="nf-inner">
+
+      <span class="nf-number">404</span>
+      <div class="nf-line"></div>
+
+      <h1 class="nf-title">Page not found</h1>
+      <p class="nf-sub">
+        Looks like this task doesn't exist.<br>
+        Let's get you back on track.
+      </p>
+
+      <div class="nf-actions">
+        <a href="index.html" class="nf-card">
+          <div class="nf-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="nf-card-text">
+            <span class="nf-card-label">Go Home</span>
+            <span class="nf-card-hint">Back to landing page</span>
+          </div>
+        </a>
+
+        <a href="index.html#features" class="nf-card">
+          <div class="nf-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <div class="nf-card-text">
+            <span class="nf-card-label">Features</span>
+            <span class="nf-card-hint">See what ToDo can do</span>
+          </div>
+        </a>
+
+        <a href="index.html#download" class="btn-main" style="border-radius:16px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1.23-1.3 1.93-.7l14 8.5c.6.36.6 1.14 0 1.5l-14 8.5c-.7.6-1.93.13-1.93-.7z"/></svg>
+          Download App
+        </a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('solid', window.scrollY > 30);
+  }, { passive: true });
+</script>
+
+</body>
+</html>
