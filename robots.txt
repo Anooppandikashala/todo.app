@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Update this to match your GitHub Pages URL
-Sitemap: https://anooppkrishnan96.github.io/todo-app/sitemap.xml
+Sitemap: https://anooppandikashala.github.io/todo.app/sitemap.xml
